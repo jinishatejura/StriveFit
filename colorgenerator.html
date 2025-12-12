@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RANDOM COLOUR GENERATOR</title>
+    <style>
+        body{
+            transition: 1s;
+        }
+        div#container{
+            display: grid;
+            height: 90vh;
+            width: 100vw;
+            justify-content: center;
+            align-content: center;
+        }
+        button{
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>RANDOM COLOUR GENERATOR</h1>
+        <button onclick="newcolor()">CLICK TO CHANGE BACKGROUND COLOUR</button>
+    </div>
+    <script>
+        function newcolor(){
+            let r=Math.floor(Math.random()*256);
+            let g=Math.floor(Math.random()*256);
+            let b=Math.floor(Math.random()*256);
+            document.body.style.backgroundColor=`rgb(${r}, ${g}, ${b})`;
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

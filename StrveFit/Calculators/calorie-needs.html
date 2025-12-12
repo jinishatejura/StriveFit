@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calorie Needs Calculator - StriveFit</title>
+    <link rel="stylesheet" href="../style.css"> 
+</head>
+<body>
+    <header class="navbar">
+        <a href="../index.html" style="text-decoration: none; color: white;">
+            <div class="site-name">StriveFit Pro</div>
+        </a>
+        <nav>
+            <a href="../index.html">Home</a>
+        </nav>
+    </header>
+
+    <div class="calculator-container">
+        <h1>Calorie Needs for Goals</h1>
+        <p>Determine your daily calorie target based on your maintenance TDEE.</p>
+
+        <div class="input-group">
+            <label for="tdee">Your Maintenance Calories (TDEE):</label>
+            <input type="number" id="tdee" min="1000" required placeholder="e.g., 2500">
+            <small>If unsure, use the BMR & TDEE Calculator first.</small>
+        </div>
+
+        <div class="input-group">
+            <label for="goal">Your Goal:</label>
+            <select id="goal">
+                <option value="lose_aggressive">Aggressive Weight Loss (Deficit -750)</option>
+                <option value="lose_moderate" selected>Moderate Weight Loss (Deficit -500)</option>
+                <option value="maintain">Maintain Current Weight (No Change)</option>
+                <option value="gain_moderate">Moderate Weight Gain (Surplus +250)</option>
+                <option value="gain_aggressive">Aggressive Weight Gain (Surplus +500)</option>
+            </select>
+        </div>
+        
+        <button id="calculate-btn">Calculate Target</button>
+        
+        <div id="result"></div>
+    </div>
+
+    <script src="calorie-needs.js"></script>
+</body>
+</html>

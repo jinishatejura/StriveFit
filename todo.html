@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="taskInput" type="text">
+    <button onclick="addTask()">Add</button>
+    <button onclick="removeTask()">Remove</button>
+    <ul id="taskList"></ul>
+    <script>
+    function addTask(){
+        let text = document.getElementById("taskInput").value.trim();
+        if(text === "") return;
+        let list = document.getElementById("taskList").children;
+        for(let i = 0; i < list.length; i++){
+            if(list[i].innerText === text) return;
+        }
+        let li = document.createElement("li");
+        li.innerText = text;
+        document.getElementById("taskList").appendChild(li);
+        document.getElementById("taskInput").value = "";
+    }
+    function removeTask(){
+        let text = document.getElementById("taskInput").value.trim();
+        if(text === "") return;
+        let list = document.getElementById("taskList").children;
+        for(let i = 0; i < list.length; i++){
+            if(list[i].innerText === text){
+                list[i].remove();
+                break;
+            }
+        }
+        document.getElementById("taskInput").value = "";
+    }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

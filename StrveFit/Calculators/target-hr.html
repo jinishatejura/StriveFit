@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Target Heart Rate Calculator - StriveFit</title>
+    <link rel="stylesheet" href="../style.css"> 
+</head>
+<body>
+    <header class="navbar">
+        <a href="../index.html" style="text-decoration: none; color: white;">
+            <div class="site-name">StriveFit Pro</div>
+        </a>
+        <nav>
+            <a href="../index.html">Home</a>
+        </nav>
+    </header>
+
+    <div class="calculator-container">
+        <h1>Target Heart Rate Calculator</h1>
+        <p>Determine your optimal cardio zone using the Karvonen formula.</p>
+
+        <div class="input-group">
+            <label for="age">Your Age (years):</label>
+            <input type="number" id="age" min="10" max="100" required placeholder="e.g., 35">
+        </div>
+        
+        <div class="input-group">
+            <label for="rhr">Resting Heart Rate (RHR):</label>
+            <input type="number" id="rhr" min="30" max="100" required placeholder="Measured when fully at rest">
+            <small>Measure RHR first thing in the morning.</small>
+        </div>
+        
+        <div class="input-group">
+            <label for="zone">Training Intensity Zone:</label>
+            <select id="zone">
+                <option value="50-60">Healthy Heart Zone (50-60%)</option>
+                <option value="60-70" selected>Temperate Fat Burning Zone (60-70%)</option>
+                <option value="70-80">Aerobic Fitness Zone (70-80%)</option>
+                <option value="80-90">Anaerobic Performance Zone (80-90%)</option>
+            </select>
+        </div>
+        
+        <button id="calculate-btn">Calculate Heart Rate</button>
+        
+        <div id="result"></div>
+    </div>
+
+    <script src="target-hr.js"></script>
+</body>
+</html>

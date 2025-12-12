@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CALCULATOR</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Poppins", sans-serif;
+      background: #F5F5F5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      background: white;
+      padding: 40px;
+      border-radius: 16px;
+      width: 360px;
+      box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+    }
+    input {
+      width: 80%;
+      padding: 14px 18px;
+      margin-top: 15px;
+      font-size: 18px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      outline: none;
+      transition: 0.2s;
+    }
+    input:focus {
+      border-color: #333;
+    }
+    .buttons {
+      margin-top: 25px;
+      display: flex;
+      justify-content: space-between;
+    }
+    button {
+      width: 70px;
+      height: 70px;
+      border-radius: 12px;
+      border: none;
+      background: #EAEAEA;
+      font-size: 28px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    button:hover {
+      background: #DCDCDC;
+    }
+    button:active {
+      transform: scale(0.95);
+    }
+    h3 {
+      margin-top: 25px;
+      font-size: 28px;
+      font-weight: 500;
+      color: #222;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <input type="number" id="i1" placeholder="Enter first number">
+    <input type="number" id="i2" placeholder="Enter second number">
+    <div class="buttons">
+      <button onclick="addNumbers()">+</button>
+      <button onclick="subtract()">-</button>
+      <button onclick="multiply()">×</button>
+      <button onclick="divide()">÷</button>
+    </div>
+    <h3 id="result"></h3>
+  </div>
+  <script>
+    function addNumbers() {
+      const in1 = Number(document.getElementById("i1").value);
+      const in2 = Number(document.getElementById("i2").value);
+      document.getElementById("result").innerText = "Sum: " + (in1 + in2);
+    }
+    function subtract() {
+      const in1 = Number(document.getElementById("i1").value);
+      const in2 = Number(document.getElementById("i2").value);
+      document.getElementById("result").innerText = "Subtraction: " + (in1 - in2);
+    }
+    function multiply() {
+      const in1 = Number(document.getElementById("i1").value);
+      const in2 = Number(document.getElementById("i2").value);
+      document.getElementById("result").innerText = "Multiplication: " + (in1 * in2);
+    }
+    function divide() {
+      const in1 = Number(document.getElementById("i1").value);
+      const in2 = Number(document.getElementById("i2").value);
+      document.getElementById("result").innerText = "Division: " + (in1 / in2);
+    }
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+

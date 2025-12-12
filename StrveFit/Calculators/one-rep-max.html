@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One-Rep Max (1RM) Calculator - StriveFit</title>
+    <link rel="stylesheet" href="../style.css"> 
+</head>
+<body>
+    <header class="navbar">
+        <a href="../index.html" style="text-decoration: none; color: white;">
+            <div class="site-name">StriveFit Pro</div>
+        </a>
+        <nav>
+            <a href="../index.html">Home</a>
+        </nav>
+    </header>
+
+    <div class="calculator-container">
+        <h1>One-Rep Max (1RM) Calculator</h1>
+        <p>Estimate your maximum lifting potential for a single rep.</p>
+
+        <div class="input-group">
+            <label for="weight">Weight Lifted (kg/lbs):</label>
+            <input type="number" id="weight" min="1" required placeholder="e.g., 100">
+        </div>
+        
+        <div class="input-group">
+            <label for="reps">Repetitions Completed (Reps):</label>
+            <input type="number" id="reps" min="2" max="15" required placeholder="e.g., 8">
+            <small>Note: Calculation is less accurate above 15 reps.</small>
+        </div>
+        
+        <button id="calculate-btn">Estimate 1RM</button>
+        
+        <div id="result"></div>
+    </div>
+
+    <script src="one-rep-max.js"></script>
+</body>
+</html>

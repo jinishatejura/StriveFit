@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Macro Split Calculator - StriveFit</title>
+    <link rel="stylesheet" href="../style.css"> 
+</head>
+<body>
+    <header class="navbar">
+        <a href="../index.html" style="text-decoration: none; color: white;">
+            <div class="site-name">StriveFit Pro</div>
+        </a>
+        <nav>
+            <a href="../index.html">Home</a>
+        </nav>
+    </header>
+
+    <div class="calculator-container">
+        <h1>Macro Split Calculator</h1>
+        <p>Convert your target calories into recommended grams of protein, carbs, and fats.</p>
+
+        <div class="input-group">
+            <label for="calories">Your Daily Target Calories:</label>
+            <input type="number" id="calories" min="1000" required placeholder="e.g., 2000 (from Calorie Needs)">
+        </div>
+        
+        <p>Choose your desired macro ratio (% must add up to 100):</p>
+
+        <div class="input-group split-group">
+            <label for="protein">Protein %:</label>
+            <input type="number" id="protein" min="10" max="60" value="30" required>
+        </div>
+        
+        <div class="input-group split-group">
+            <label for="carbs">Carbohydrates %:</label>
+            <input type="number" id="carbs" min="10" max="80" value="40" required>
+        </div>
+        
+        <div class="input-group split-group">
+            <label for="fat">Fat %:</label>
+            <input type="number" id="fat" min="10" max="60" value="30" required>
+        </div>
+        
+        <button id="calculate-btn">Calculate Macro Grams</button>
+        
+        <div id="result"></div>
+    </div>
+
+    <script src="macro-split.js"></script>
+</body>
+</html>
